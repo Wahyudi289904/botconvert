@@ -898,7 +898,7 @@ async def xlsx_to_txt(update: Update, context: CallbackContext):
 
 # Menambahkan handler untuk perintah /admin dan proses langkah-langkah
 def main():
-    application = Application.builder().token('7943963188:AAFuC4RO_iuqzr5-04MjlLQWi2JZLWKi8X8').build()
+    application = Application.builder().token(os.environ['BOT_TOKEN']).build()
 
     application.add_handler(CommandHandler("start", start))
     application.add_handler(CommandHandler("reset", reset_settings))
